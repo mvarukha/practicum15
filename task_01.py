@@ -7,13 +7,13 @@ def pownum(a: float, n: int) -> float:
     if n < 0:
         raise ValueError("n must be a natural number.")
     if n == 0:
-        return 1
-    half_n = n // 2
-    half_power = pownum(a, half_n)
+        return 1  # Base case: a^0 = 1.
+    half_n = n // 2  # Dividing the degree in half.
+    half_power = pownum(a, half_n)  # Calculating a^(n//2).
     if n % 2 == 0:
-        return half_power * half_power
+        return half_power * half_power  # If n is even: (a^(n/2))^2.
     else:
-        return a * half_power * half_power
+        return a * half_power * half_power  # If n is odd: a * (a^((n-1)/2))^2.
 
 
 def main() -> None:
@@ -22,9 +22,9 @@ def main() -> None:
     and prints the result of a^n.
     """
     try:
-        a = float(input())
-        n = int(input())
-        result = pownum(a, n)
+        a = float(input())  # Reading the base.
+        n = int(input())  # Reading the degree.
+        result = pownum(a, n)  # a^n.
         print(result)
     except ValueError as e:
         print(f"Error: {e}")
