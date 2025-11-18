@@ -25,7 +25,7 @@ def main() -> None:
         result = count(n)
         print(result)
     except ValueError:
-        print("Invalid input.")  # Обрабатываем ошибку ввода.
+        print("Invalid input.")
 
 
 if __name__ == "__main__":
