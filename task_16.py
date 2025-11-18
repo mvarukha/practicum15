@@ -27,8 +27,8 @@ def main() -> None:
     Reads x and n, prints the n-ary representation of x.
     """
     try:
-        x = int(input())  # Reading the number.
-        n = int(input())  # Reading the base of the number.
+        x = int(input())  # The number.
+        n = int(input())  # The base of the number.
         if x < 0:  # Checking that x is a natural number.
             print("x must be a natural number.")
             return
