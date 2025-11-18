@@ -8,7 +8,7 @@ def count(a: int, b: int) -> int:
         return 0  # If one of the sides = 0, no more squares can be cut off.
     if a < b:
         a, b = b, a  # We swap them so that a >= b.
-    return 1 + count(a - b, b)  # We cut off a square b x b, and continue with the remaining part.
+    return 1 + count(a - b, b)  # Cutting off a square b x b, and continue with the remaining part.
 
 
 def main() -> None:
