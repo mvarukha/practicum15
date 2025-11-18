@@ -5,7 +5,7 @@ def mod_number(a: int, b: int) -> int:
     a and b are natural numbers.
     """
     if a < b:
-        return a
+        return a  # Remainder is a.
     return mod_number(a - b, b)
 
 
@@ -15,15 +15,15 @@ def main() -> None:
     remainder of a divided by b.
     """
     try:
-        a = int(input())
-        b = int(input())
+        a = int(input())  # Reads the dividend.
+        b = int(input())  # Reads the divisor.
         if a < 0 or b <= 0:
-            print("Error: a must be non-negative, b must be positive.")
+            print("a must be non-negative, b must be positive.")
             return
-        result = mod_number(a, b)
+        result = mod_number(a, b)  # Calculates the remainder.
         print(result)
     except ValueError:
-        print("Error: invalid input.")
+        print("Invalid input.")
 
 
 if __name__ == "__main__":
