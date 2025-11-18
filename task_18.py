@@ -12,7 +12,8 @@ def simmetr(s: str, i: int, j: int) -> bool:
 
 def main() -> None:
     """
-    Reads a string and indices i, j, prints True if the substring is symmetric, otherwise False.
+    Reads a string and indices i, j, prints True
+    if the substring is symmetric, otherwise False.
     """
     try:
         s = input()
