@@ -6,9 +6,9 @@ def sum_progress(a1: float, r: float, n: int) -> float:
     difference, n is the number of terms.
     """
     if n == 1:
-        return a1
-    current_term = a1 + (n - 1) * r  # n-th therm of progression.
-    return current_term + sum_progress(a1, r, n - 1)
+        return a1  # Returns the first term.
+    current_term = a1 + (n - 1) * r  # Calculate the n-th term of progression.
+    return current_term + sum_progress(a1, r, n - 1)  # Add current term and recurse for the rest.
 
 
 def main() -> None:
@@ -17,16 +17,16 @@ def main() -> None:
     first n terms of the arithmetic progression.
     """
     try:
-        a1 = float(input())
-        r = float(input())
-        n = int(input())
+        a1 = float(input())  # Reads the first term.
+        r = float(input())  # Reads the common difference.
+        n = int(input())  # Reads the number of terms.
         if n < 1:
-            print("Error: n must be a positive integer.")
+            print("n must be a positive integer.")
             return
-        result = sum_progress(a1, r, n)
+        result = sum_progress(a1, r, n)  # Calculates the sum of first n terms.
         print(result)
     except ValueError:
-        print("Error: invalid input.")
+        print("Invalid input.")
 
 
 if __name__ == "__main__":
