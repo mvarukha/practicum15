@@ -9,11 +9,11 @@ def ten_to_bin(x: int) -> str:
         build the binary representation.
         """
         if n == 0:
-            return ""
-        return helper(n // 2) + str(n % 2)
+            return ""  # No more digits to process.
+        return helper(n // 2) + str(n % 2)  # Add the binary digit to the result.
 
     if x == 0:
-        return "0"
+        return "0"  # x is 0.
     return helper(x)
 
 
