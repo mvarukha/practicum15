@@ -17,7 +17,7 @@ def main() -> None:
         if k < 1:
             print("k must be a positive integer.")
             return
-        result = fib(k)
+        result = fib(k) # The k-th F. number.
         print(result)
     except ValueError:
         print("Invalid input.")
