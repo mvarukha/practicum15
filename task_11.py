@@ -9,14 +9,14 @@ def ind_maxlist(a: list[int]) -> int:
         the index of the maximum element.
         """
         if index == len(a):
-            return max_index
+            return max_index  # Reached end of list, return index of max element.
         if a[index] > a[max_index]:
             max_index = index
         return helper(index + 1, max_index)
 
     if not a:
         raise ValueError("List is empty.")
-    return helper(1, 0)
+    return helper(1, 0)  # Start from index 1, with 0 as initial max index.
 
 
 def main() -> None:
