@@ -12,12 +12,12 @@ def odd_list(a: list[int], n: int) -> list[int]:
         build the list of even numbers.
         """
         if index == n:
-            return result
+            return result  # Processed n elements, return result.
         if a[index] % 2 == 0:
-            result.append(a[index])
-        return helper(index + 1, result)
+            result.append(a[index])  # Add even number to the result.
+        return helper(index + 1, result)  # Go the next element.
 
-    return helper(0, [])
+    return helper(0, [])  # Start from index 0 with an empty result list.
 
 
 def main() -> None:
@@ -26,12 +26,12 @@ def main() -> None:
     list of even values from the first n elements.
     """
     try:
-        a = list(map(int, input().split()))
-        n = int(input())
+        a = list(map(int, input().split()))  # Read the list of integers.
+        n = int(input())  # Read the number of elements to process.
         if n < 0 or n > len(a):
             print("n must be between 0 and the length of the list.")
             return
-        result = odd_list(a, n)
+        result = odd_list(a, n)  # Get the list of even numbers.
         print(result)
     except ValueError:
         print("Invalid input.")
