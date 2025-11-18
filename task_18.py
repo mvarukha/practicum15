@@ -18,13 +18,13 @@ def main() -> None:
         s = input()
         i = int(input())
         j = int(input())
-        if i < 0 or j >= len(s) or i > j:  # Checking the correctness of the indices.
-            print("Error: invalid indices.")
+        if i < 0 or j >= len(s) or i > j:  # Checking the correctness of the indexes.
+            print("Invalid indexes.")
             return
         result = simmetr(s, i, j)
         print(result)
     except ValueError:
-        print("Error: invalid input.")
+        print("Invalid input.")
 
 
 if __name__ == "__main__":
