@@ -9,14 +9,14 @@ def search(a: list[int], x: int) -> int:
         search for x using index.
         """
         if index == len(a):
-            return 0
+            return 0  # Reached the end of the list, x not found.
         if a[index] == x:
-            return 1
-        return helper(index + 1)
+            return 1  # Found x, return 1.
+        return helper(index + 1)  # To the next element.
 
     if not a:
-        return 0
-    return helper(0)
+        return 0  # If the list is empty, x is not found.
+    return helper(0)  # Start searching from index 0.
 
 
 def main() -> None:
@@ -25,12 +25,12 @@ def main() -> None:
     prints 1 if x is in the list, otherwise 0.
     """
     try:
-        a = list(map(int, input().split()))
-        x = int(input())
-        result = search(a, x)
+        a = list(map(int, input().split()))  # Read the list of integers.
+        x = int(input())  # Read the number x.
+        result = search(a, x)  # Check if x exists in the list.
         print(result)
     except ValueError:
-        print("Error: invalid input.")
+        print("Invalid input.")
 
 
 if __name__ == "__main__":
