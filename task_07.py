@@ -1,11 +1,11 @@
 def nod(a: int, b: int) -> int:
     """
     Recursively calculates the greatest common
-    divisor of two natural numbers: a and b.
+    divisor (GCD) of two natural numbers: a and b.
     """
     if b == 0:
-        return a
-    return nod(b, a % b)
+        return a  # if b is 0, GCD is a.
+    return nod(b, a % b)  # Euclidean algorithm: GCD(a, b) = GCD(b, a % b).
 
 
 def main() -> None:
