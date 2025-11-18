@@ -4,7 +4,7 @@ def function1(x: int) -> int:
     Returns 1 if prime, 0 otherwise.
     """
     if x < 2:
-        return 0  # Numbers less than 2 are not prime.
+        return 0  # Bc numbers less than 2 are not prime.
 
     def is_prime(divisor: int) -> int:
         """
@@ -15,7 +15,7 @@ def function1(x: int) -> int:
             return 1  # If the divisor is more than the root, x is prime.
         if x % divisor == 0:
             return 0  # The divisor has been found => x is not prime.
-        return is_prime(divisor + 1)  # Checking the next divisor.
+        return is_prime(divisor + 1)
 
     return is_prime(2)
 
