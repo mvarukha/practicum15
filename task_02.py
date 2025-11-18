@@ -1,6 +1,7 @@
 def count(n: int) -> int:
     """
-    Recursively calculates the number of digits in a natural number n.
+    Recursively calculates the number
+    of digits in a natural number n.
     """
     if n < 10:
         return 1  # Base case: if n < 10, then it has 1 digit.
@@ -9,7 +10,8 @@ def count(n: int) -> int:
 
 def main() -> None:
     """
-    Reads a natural number and prints the count of its digits.
+    Reads a natural number and
+    prints the count of its digits.
     """
     try:
         n = int(input())
